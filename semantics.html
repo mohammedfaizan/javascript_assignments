@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page Layout</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+      header,
+      footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        height: 100px;
+      }
+      main {
+        font-size: 0;
+      }
+      article,
+      aside {
+        display: inline-block;
+        vertical-align: top;
+        font-size: 16px;
+        padding: 20px;
+        box-sizing: border-box;
+        height: 300px;
+      }
+      article {
+        width: 75%;
+        background-color: #f4f4f4;
+      }
+      aside {
+        width: 25%;
+        background-color: #e0e0e0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>Header</header>
+
+    <main>
+      <article>Main Content</article>
+      <aside>Side Content</aside>
+    </main>
+
+    <footer>Footer</footer>
+  </body>
+</html>
