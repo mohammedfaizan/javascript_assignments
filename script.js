@@ -321,6 +321,44 @@
 //   return reverseStr(str.substring(1)) + str[0];
 // }
 
+// const form = document.getElementById("form");
+// const h1 = document.getElementById("m1");
+// const h2 = document.getElementById("m2");
+// const h3 = document.getElementById("m3");
+
+// form.addEventListener("submit", function (event) {
+//   event.preventDefault();
+
+//   outputArr = [];
+//   // prepping the input
+
+//   const inputHeight = document.getElementById("input-h");
+//   const inputWidth = document.getElementById("input-w");
+
+//   let height = parseInt(inputHeight.value.trim());
+//   let width = parseInt(inputWidth.value.trim());
+
+//   h1.innerHTML = `Width: ${width} <br> height: ${height}`;
+
+//   const Rect = {
+//     width: width,
+//     height: height,
+
+//     calcArea: function () {
+//       h2.textContent = `Area of the Rectangle: ${this.width * this.height}`;
+//     },
+
+//     calcPerimeter: function () {
+//       h3.textContent = `Perimeter of the Rectangle: ${
+//         this.width * 2 + this.height * 2
+//       }`;
+//     },
+//   };
+
+//   Rect.calcArea();
+//   Rect.calcPerimeter();
+// });
+
 const form = document.getElementById("form");
 const h1 = document.getElementById("m1");
 const h2 = document.getElementById("m2");
@@ -329,32 +367,24 @@ const h3 = document.getElementById("m3");
 form.addEventListener("submit", function (event) {
   event.preventDefault();
 
-  outputArr = [];
-  // prepping the input
+  const empName = document.getElementById("name").value;
+  const empId = parseInt(document.getElementById("emp-id").value);
+  const empSal = parseInt(document.getElementById("salary").value);
+  const deptName = document.getElementById("dept-name").value;
 
-  const inputHeight = document.getElementById("input-h");
-  const inputWidth = document.getElementById("input-w");
-
-  let height = parseInt(inputHeight.value.trim());
-  let width = parseInt(inputWidth.value.trim());
-
-  h1.innerHTML = `Width: ${width} <br> height: ${height}`;
-
-  const Rect = {
-    width: width,
-    height: height,
-
-    calcArea: function () {
-      h2.textContent = `Area of the Rectangle: ${this.width * this.height}`;
-    },
-
-    calcPerimeter: function () {
-      h3.textContent = `Perimeter of the Rectangle: ${
-        this.width * 2 + this.height * 2
-      }`;
-    },
+  const EmpObj = {
+    empName: empName,
+    empId: empId,
+    empSal: empSal,
+    deptName: deptName,
   };
 
-  Rect.calcArea();
-  Rect.calcPerimeter();
+  h1.innerHTML = `Employee Name: ${EmpObj.empName} <br> Employee Id: ${EmpObj.empId} <br>
+  Employee Salary: ${EmpObj.empSal} <br> Dept Name: ${EmpObj.deptName}`;
+
+  delete EmpObj.deptName;
+
+  for (const [key, value] of Object.entries(EmpObj)) {
+    h2.innerHTML += `${key}:${value} <br>`;
+  }
 });
