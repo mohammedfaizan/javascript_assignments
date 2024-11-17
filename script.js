@@ -359,32 +359,99 @@
 //   Rect.calcPerimeter();
 // });
 
-const form = document.getElementById("form");
-const h1 = document.getElementById("m1");
-const h2 = document.getElementById("m2");
-const h3 = document.getElementById("m3");
+// const form = document.getElementById("form");
+// const h1 = document.getElementById("m1");
+// const h2 = document.getElementById("m2");
+// const h3 = document.getElementById("m3");
 
-form.addEventListener("submit", function (event) {
-  event.preventDefault();
+// form.addEventListener("submit", function (event) {
+//   event.preventDefault();
 
-  const empName = document.getElementById("name").value;
-  const empId = parseInt(document.getElementById("emp-id").value);
-  const empSal = parseInt(document.getElementById("salary").value);
-  const deptName = document.getElementById("dept-name").value;
+//   const empName = document.getElementById("name").value;
+//   const empId = parseInt(document.getElementById("emp-id").value);
+//   const empSal = parseInt(document.getElementById("salary").value);
+//   const deptName = document.getElementById("dept-name").value;
 
-  const EmpObj = {
-    empName: empName,
-    empId: empId,
-    empSal: empSal,
-    deptName: deptName,
-  };
+//   const EmpObj = {
+//     empName: empName,
+//     empId: empId,
+//     empSal: empSal,
+//     deptName: deptName,
+//   };
 
-  h1.innerHTML = `Employee Name: ${EmpObj.empName} <br> Employee Id: ${EmpObj.empId} <br>
-  Employee Salary: ${EmpObj.empSal} <br> Dept Name: ${EmpObj.deptName}`;
+//   h1.innerHTML = `Employee Name: ${EmpObj.empName} <br> Employee Id: ${EmpObj.empId} <br>
+//   Employee Salary: ${EmpObj.empSal} <br> Dept Name: ${EmpObj.deptName}`;
 
-  delete EmpObj.deptName;
+//   delete EmpObj.deptName;
 
-  for (const [key, value] of Object.entries(EmpObj)) {
-    h2.innerHTML += `${key}:${value} <br>`;
+//   for (const [key, value] of Object.entries(EmpObj)) {
+//     h2.innerHTML += `${key}:${value} <br>`;
+//   }
+// });
+//assignment 26
+function islandPerimeter(grid) {
+  let perimeter = 0;
+  const rows = grid.length;
+  const cols = grid[0].length;
+
+  const directions = [
+    [-1, 0],
+    [1, 0],
+    [0, -1],
+    [0, 1],
+  ];
+
+  for (let r = 0; r < rows; r++) {
+    for (let c = 0; c < cols; c++) {
+      if (grid[r][c] === 1) {
+        directions.forEach((direction) => {
+          const nr = r + direction[0];
+          const nc = c + direction[1];
+
+          if (
+            nr < 0 ||
+            nr >= rows ||
+            nc < 0 ||
+            nc >= cols ||
+            grid[nr][nc] === 0
+          ) {
+            perimeter += 1;
+          }
+        });
+      }
+    }
   }
-});
+
+  return perimeter;
+}
+
+function handleCalculate() {
+  const gridInput = document.getElementById("gridInput").value.trim();
+  const outputDiv = document.getElementById("output");
+
+  const grid = JSON.parse(gridInput);
+
+  if (!Array.isArray(grid) || grid.length === 0 || !Array.isArray(grid[0])) {
+    alert("Invalid input format. Please enter a valid 2D grid.");
+  }
+
+  const cols = grid[0].length;
+  for (let row of grid) {
+    if (!Array.isArray(row) || row.length !== cols) {
+      alert("Invalid grid. All rows must have the same number of columns.");
+    }
+    for (let cell of row) {
+      if (cell !== 0 && cell !== 1) {
+        alert("Invalid cell value. Only 0 (water) and 1 (land) are allowed.");
+      }
+    }
+  }
+
+  const perimeter = islandPerimeter(grid);
+
+  outputDiv.innerHTML = `<strong>Perimeter:</strong> ${perimeter}`;
+}
+
+document
+  .getElementById("calculateBtn")
+  .addEventListener("click", handleCalculate);

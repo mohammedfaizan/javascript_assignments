@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Assignment 26</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 40px;
+        background-color: #f9f9f9;
+        text-align: center;
+      }
+
+      textarea {
+        width: 100%;
+        height: 150px;
+        padding: 10px;
+        font-size: 16px;
+        resize: vertical;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Island Perimeter Calculator</h1>
+
+    <div class="input-section">
+      <label for="gridInput"><strong>Enter the grid:</strong></label>
+      <textarea
+        id="gridInput"
+        placeholder="Enter a 2D grid like:
+[
+  [0,0,0,0],
+  [0,0,0,0],
+  [0,0,0,0],
+  [0,0,0,0]
+]"
+      ></textarea>
+      <button id="calculateBtn">Calculate Perimeter</button>
+    </div>
+
+    <div class="output-section" id="output"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
