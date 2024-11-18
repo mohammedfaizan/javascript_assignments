@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WSA Assignment 37</title>
+    <style>
+      body {
+        text-align: center;
+      }
+      textarea {
+        width: 400px;
+        height: 200px;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        resize: vertical;
+      }
+      button {
+        padding: 10px 20px;
+        margin-top: 10px;
+        font-size: 16px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #0056b3;
+      }
+      .output {
+        margin-top: 20px;
+        padding: 15px;
+        background-color: #ffffff;
+
+        width: 500px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Create Employee Object</h1>
+    <form id="form">
+      <textarea
+        id="employeeInput"
+        type="text"
+        placeholder="Enter the Employee object...
+Example:
+Employee {
+    name : “raghunath”,
+    empId : 001,
+    empSalray : 10000,
+    deptName : “WSA”
+}"
+        required
+      ></textarea>
+      <br />
+      <button id="btn">Send Input</button>
+    </form>
+
+    <div class="output" id="m1"></div>
+    <div class="output" id="m2"></div>
+    <div class="output" id="m3"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
