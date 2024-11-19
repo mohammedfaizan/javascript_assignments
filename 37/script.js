@@ -50,3 +50,10 @@ function handleFormSubmit(event) {
 }
 
 document.getElementById("form").addEventListener("submit", handleFormSubmit);
+
+const ca = (bt) => {
+  console.log(2037 - bt);
+  console.log(this);
+};
+
+ca(17);
