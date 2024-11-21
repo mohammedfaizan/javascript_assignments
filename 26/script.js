@@ -44,18 +44,6 @@ function handleCalculate() {
     alert("Invalid input format. Please enter a valid 2D grid.");
   }
 
-  const cols = grid[0].length;
-  for (let row of grid) {
-    if (!Array.isArray(row) || row.length !== cols) {
-      alert("Invalid grid. All rows must have the same number of columns.");
-    }
-    for (let cell of row) {
-      if (cell !== 0 && cell !== 1) {
-        alert("Invalid cell value. Only 0 (water) and 1 (land) are allowed.");
-      }
-    }
-  }
-
   const perimeter = islandPerimeter(grid);
 
   outputDiv.innerHTML = `<strong>Perimeter:</strong> ${perimeter}`;
