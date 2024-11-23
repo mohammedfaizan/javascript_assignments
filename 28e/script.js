@@ -17,7 +17,25 @@ form.addEventListener("submit", function (event) {
   let position = parseInt(inputP.value);
   h1.innerHTML = `String Entered: ${inputString}`;
 
-  h2.innerHTML = `Char to be removed Entered: ${trimChar}`;
+  if (position === NaN) {
+    position = 0;
+  }
 
-  h3.textContent = `The string after trim: ${myTrim(inputString, trimChar)}`;
+  h2.innerHTML = `Position where string is to be Entered: ${position}`;
+
+  h3.textContent = `The string after insertion of second string is: ${insertString(
+    inputString,
+    inputString2,
+    position
+  )}`;
 });
+
+function insertString(string1, string2, pos) {
+  resultString = string1.substring(0, pos);
+
+  resultString += ` ${string2}`;
+
+  resultString += ` ${string1.substring(pos, string1.length)}`;
+
+  return resultString;
+}
