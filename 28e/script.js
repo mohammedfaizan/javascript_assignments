@@ -17,8 +17,8 @@ form.addEventListener("submit", function (event) {
   let position = parseInt(inputP.value);
   h1.innerHTML = `String Entered: ${inputString}`;
 
-  if (position === NaN) {
-    position = 0;
+  if (isNaN(position)) {
+    position = inputString.length;
   }
 
   h2.innerHTML = `Position where string is to be Entered: ${position}`;
@@ -35,7 +35,9 @@ function insertString(string1, string2, pos) {
 
   resultString += ` ${string2}`;
 
-  resultString += ` ${string1.substring(pos, string1.length)}`;
+  if (pos < string1.length) {
+    resultString += ` ${string1.substring(pos, string1.length)}`;
+  }
 
   return resultString;
 }
