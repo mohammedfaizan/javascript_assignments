@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Email Registration Form</title>
+  </head>
+  <body>
+    <h2>Email Registration Form</h2>
+    <form id="registrationForm">
+      <div>
+        <label>First Name:</label>
+        <input
+          type="text"
+          id="firstName"
+          placeholder="First Name"
+          maxlength="10"
+          required
+        />
+      </div>
+      <div>
+        <label>Last Name:</label>
+        <input
+          type="text"
+          id="lastName"
+          placeholder="Last Name"
+          maxlength="10"
+          required
+        />
+      </div>
+      <div>
+        <label>Username:</label>
+        <input
+          type="text"
+          id="username"
+          placeholder="Username"
+          minlength="8"
+          required
+        />
+      </div>
+      <div>
+        <label>Password:</label>
+        <input type="password" id="password" placeholder="Password" required />
+      </div>
+      <div>
+        <label>Confirm Password:</label>
+        <input
+          type="password"
+          id="confirmPassword"
+          placeholder="Confirm Password"
+          required
+        />
+      </div>
+      <div>
+        <label>Date of Birth:</label>
+        <input type="date" id="dob" required />
+      </div>
+      <div>
+        <label>Country:</label>
+        <select id="country" required>
+          <option value="">Select Country</option>
+          <option value="USA">USA</option>
+          <option value="UK">UK</option>
+          <option value="Canada">Canada</option>
+        </select>
+      </div>
+      <div>
+        <label>Gender:</label>
+        <input type="checkbox" id="male" name="gender" value="Male" /> Male
+        <input type="checkbox" id="female" name="gender" value="Female" />
+        Female
+      </div>
+      <div>
+        <label>Phone Number:</label>
+        <input
+          type="tel"
+          id="phone"
+          pattern="[0-9]{10}"
+          placeholder="1234567890"
+          required
+        />
+      </div>
+      <div>
+        <label>Alternative Email:</label>
+        <input type="email" id="altEmail" placeholder="Alternative Email" />
+      </div>
+      <div>
+        <input type="checkbox" id="agree" required />
+        <label for="agree"
+          >I agree to the Terms of Service and Privacy Policy</label
+        >
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+
+    <script src="script.js"></script>
+  </body>
+</html>
