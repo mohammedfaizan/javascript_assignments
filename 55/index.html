@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WSA Assignment 55</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 id="heading">Buy Tickets to the Web Developers Gala</h1>
+    <p id="info">
+      Tickets are $10 each. Dinner packages are an extra $5. All fields are
+      required
+    </p>
+
+    <div>
+      <p id="tickets" class="header">Tickets and Add-ons</p>
+      <label for="no-of-tickets"
+        >Number of Tickets <small>Limit 8</small></label
+      >
+      <input type="text" name="no-of-tickets" id="no-of-tickets" />
+
+      <br /><br />
+
+      <label for="dinner-packages"
+        >Dinner Packages <small>Serve 2</small></label
+      >
+      <input type="text" name="dinner-packages" id="dinner-packages" />
+    </div>
+
+    <div id="payment-section">
+      <p id="payment" class="header">Payment</p>
+      <label for="credit-card"
+        >Credit Card Number <small>No spaces or dashes please</small></label
+      >
+      <input type="text" name="credit-card" id="credit-card" />
+
+      <br /><br />
+
+      <label for="expiry-date">Expiration Date <small>MM/YY</small></label>
+      <input type="text" name="expiry-date" id="expiry-date" />
+    </div>
+
+    <div>
+      <p id="billing-address" class="header">Billing Address</p>
+      <label for="name">Name</label>
+      <br />
+      <input
+        type="text"
+        name="name"
+        id="name"
+        placeholder="ex. John Q. public"
+      />
+
+      <br /><br />
+
+      <label for="street-adress">Street Address</label>
+      <br />
+      <input
+        type="text"
+        name="street-adress"
+        id="street-adress"
+        placeholder="ex. 12345 Main street, Apt 23"
+      />
+      <br /><br />
+
+      <label for="city">City</label>
+      <br />
+      <input type="text" name="city" id="city" placeholder="ex. Anytown" />
+      <br /><br />
+
+      <label for="state">State</label>
+      <br />
+      <input type="text" name="state" id="state" placeholder="CA" />
+      <br /><br />
+
+      <label for="pincode">Pincode</label>
+      <br />
+      <input type="text" name="pincode" id="pincode" placeholder="123456" />
+      <br /><br />
+    </div>
+
+    <button id="buy-tickets">Buy Tickets!</button>
+  </body>
+</html>
