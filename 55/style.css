@@ -45,18 +45,18 @@ small {
 #tickets {
   position: fixed;
   top: 120px;
-  right: 80px;
+  left: 1600px;
 }
 
 #payment {
   position: fixed;
   top: 295px;
-  right: 80px;
+  left: 1600px;
 }
 
 #billing-address {
   position: fixed;
-  right: 80px;
+  left: 1600px;
   top: 470px;
 }
 
