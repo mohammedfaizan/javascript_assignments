@@ -1,0 +1,67 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.reminder-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 30px;
+}
+
+.para {
+  width: 200px;
+  height: 130px;
+  background-color: blue;
+  text-align: center;
+  line-height: 150px;
+  font-size: xx-large;
+  color: antiquewhite;
+}
+
+.reminder {
+  background-color: pink;
+}
+
+.reminder:hover + .reminder-display {
+  position: fixed;
+  left: 800px;
+  bottom: 100px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 200px;
+  background-color: pink;
+}
+
+/* .reminder-display {
+  
+  
+} */
+
+.reminder-display {
+  display: none;
+}
+
+.reminder-display div {
+  line-height: 30px;
+  text-align: center;
+  width: 60px;
+  height: 40px;
+  background-color: rgb(177, 16, 70);
+}
+
+.reminder-display h4 {
+  color: red;
+}
+
+.reminder-display strong {
+  background-color: green;
+}
