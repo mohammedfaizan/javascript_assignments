@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.logo img {
+  width: 20px;
+  height: 20px;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  background-color: black;
+  align-items: center;
+  height: 6vh;
+}
+
+.nav-link {
+  color: white;
+  font-size: larger;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+a:hover {
+  color: yellow;
+}
+
+.nav-link::before {
+  content: "|";
+  padding: 40px;
+}
+
+.last::after {
+  content: "|";
+  padding: 40px;
+}
+
+.logo > a {
+  text-decoration: none;
+  color: white;
+  font-size: larger;
+  font-weight: 600;
+}
+
+.logo > a:hover {
+  color: yellow;
+}
