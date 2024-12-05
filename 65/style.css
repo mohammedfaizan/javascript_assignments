@@ -1,0 +1,127 @@
+body {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  flex-wrap: wrap;
+  width: 310px;
+  height: auto;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.box {
+  height: 50px;
+  width: 50px;
+  background-color: greenyellow;
+  text-align: center;
+  padding: 20px;
+}
+
+#hover-h:hover {
+  height: 50px;
+  width: 160px;
+  background-color: green;
+  font-size: 24px;
+  transition: color 0.5s ease, font-size 0.5s ease;
+}
+
+#hover-a:hover {
+  height: 50px;
+  width: 300px;
+  background-color: orange;
+  text-align: center;
+  padding: 20px;
+  font-size: 24px;
+  transition: color 0.5s ease, font-size 0.5s ease;
+}
+
+.hover-b {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "hover-b hover-b hover-c"
+    "hover-b hover-b hover-d"
+    "hover-b hover-b hover-e"
+    "hover-f hover-g hover-h";
+}
+
+.hover-b .b {
+  width: 80%;
+  height: 90%;
+  text-align: center;
+}
+
+#hover-b:hover {
+  font-size: 24px;
+  background-color: aquamarine;
+  transition: color 0.5s ease, font-size 0.5s ease;
+}
+
+.hover-c {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "hover-a hover-b hover-c"
+    "hover-d hover-d hover-d"
+    "hover-e hover-e hover-e"
+    "hover-f hover-f hover-f"
+    "hover-g hover-g hover-g"
+    "hover-h hover-h hover-h";
+  gap: 5px;
+  padding: 10px;
+  width: 310px;
+  height: auto;
+}
+
+.hover-c .d,
+.hover-c .e,
+.hover-c .f,
+.hover-c .g,
+.hover-c .h {
+  width: 80%;
+  height: 60%;
+  text-align: center;
+}
+
+.b {
+  grid-area: hover-b;
+}
+
+.c {
+  grid-area: hover-c;
+}
+
+.d {
+  grid-area: hover-d;
+}
+
+.e {
+  grid-area: hover-e;
+}
+
+.f {
+  grid-area: hover-f;
+}
+
+.g {
+  grid-area: hover-g;
+}
+
+.h {
+  grid-area: hover-h;
+}
+
+#hover-c:hover ~ .box {
+  font-size: 24px;
+  background-color: pink;
+  transition: color 0.5s ease, font-size 0.5s ease;
+}

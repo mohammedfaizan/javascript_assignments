@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WSA Assignment 65</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="box a" id="hover-a">A <br />hover</div>
+      <div class="box b" id="hover-b">B <br />hover</div>
+      <div class="box c" id="hover-c">C <br />hover</div>
+      <div class="box d">D</div>
+      <div class="box e">E</div>
+      <div class="box f">F</div>
+      <div class="box g">G</div>
+      <div class="box h hover" id="hover-h">H <br />hover</div>
+    </div>
+
+    <script>
+      let b = document.getElementById("hover-b");
+      let a = document.getElementById("hover-a");
+      let c = document.getElementById("hover-c");
+      let container = document.querySelector(".container");
+      b.addEventListener("mouseover", function () {
+        container.classList.add("hover-b");
+        a.style.display = "none";
+      });
+
+      b.addEventListener("mouseout", function () {
+        container.classList.remove("hover-b");
+        a.style.display = "block";
+      });
+
+      c.addEventListener("mouseover", function () {
+        container.classList.add("hover-c");
+      });
+
+      c.addEventListener("mouseout", function () {
+        container.classList.remove("hover-c");
+      });
+    </script>
+  </body>
+</html>
