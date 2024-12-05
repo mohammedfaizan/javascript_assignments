@@ -1,0 +1,147 @@
+body {
+  padding: 0;
+  margin: 0;
+  background-color: darkgray;
+}
+
+.title-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#p1 {
+  width: 100px;
+  height: 40px;
+  background-color: gray;
+  position: absolute;
+  top: 1px;
+  left: 30px;
+}
+
+#p2 {
+  width: 250px;
+  height: 40px;
+  background-color: gray;
+  position: absolute;
+  top: 41px;
+  left: 30px;
+}
+
+#p3 {
+  width: 100px;
+  height: 40px;
+  background-color: gray;
+  position: absolute;
+  top: 1px;
+  right: 60px;
+}
+
+#p4 {
+  width: 250px;
+  height: 40px;
+  background-color: gray;
+  position: absolute;
+  top: 41px;
+  right: 60px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas:
+    "intro results results conclusions"
+    "materials results results litreture-cited"
+    "materials results results litreture-cited";
+  gap: 10px;
+  padding: 30px;
+}
+
+/* .box {
+    width: 100%;
+    height: auto;
+    background-color: whitesmoke;
+} */
+
+.introduction {
+  grid-area: intro;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: start;
+  width: 85%;
+  height: auto;
+  background-color: whitesmoke;
+  border: 2px solid black;
+  padding: 16px;
+}
+
+.results {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: start;
+  grid-area: results;
+  width: 95%;
+  height: auto;
+  background-color: whitesmoke;
+  border: 2px solid black;
+  padding: 16px;
+}
+
+.materials {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: start;
+  grid-area: materials;
+  width: 85%;
+  height: auto;
+  background-color: whitesmoke;
+  border: 2px solid black;
+  padding: 16px;
+}
+
+.conclusions {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: start;
+  grid-area: conclusions;
+  width: 85%;
+  height: auto;
+  background-color: whitesmoke;
+  border: 2px solid black;
+  padding: 16px;
+}
+
+.litreture-cited {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: start;
+  grid-area: litreture-cited;
+  width: 85%;
+  height: auto;
+  background-color: whitesmoke;
+  border: 2px solid black;
+  padding: 16px;
+}
+
+.border {
+  padding: 5px;
+  border-bottom: 1px solid black;
+}
+
+.center {
+  width: 400px;
+  height: 100px;
+  background-color: yellow;
+  color: red;
+  border: 2px solid black;
+  text-align: center;
+  padding-top: 20px;
+  align-self: center;
+}
