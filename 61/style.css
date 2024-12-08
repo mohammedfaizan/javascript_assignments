@@ -1,0 +1,168 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background: #fff;
+  position: relative;
+  border-bottom: 1px solid #ccc;
+}
+
+.logo-container {
+  font-family: "Caveat", cursive;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.logo {
+  text-decoration: none;
+  color: black;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+.toggle-btn {
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: auto;
+  display: none;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.links a {
+  text-decoration: none;
+  color: black;
+  margin: 0 10px;
+}
+
+.social-container {
+  margin-left: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 20px;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.section-text-1,
+.section-text-2,
+.section-text-3 {
+  background-color: white;
+  text-align: center;
+  position: absolute;
+  top: 650px;
+  width: 550px;
+  height: 200px;
+  z-index: 10;
+}
+
+.section-text-1 {
+  left: 45px;
+}
+.section-text-3 {
+  left: 45px;
+}
+.section-text-2 {
+  left: 45px;
+}
+
+.fashion {
+  color: orangered;
+}
+
+.date {
+  color: gray;
+}
+
+@media (max-width: 1024px) {
+  .toggle-btn {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    background: #fff;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    border-top: 1px solid #ccc;
+    padding: 20px 0;
+  }
+
+  .nav-toggle:checked ~ .menu {
+    display: flex;
+  }
+
+  .links a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .social-container {
+    margin: 20px 0 0;
+  }
+
+  .header {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .section {
+    width: 45%;
+    margin-bottom: 20px;
+  }
+
+  .section-text-1,
+  .section-text-2,
+  .section-text-3 {
+    position: static;
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    top: auto;
+    left: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .section {
+    width: 90%;
+  }
+}
