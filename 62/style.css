@@ -1,0 +1,178 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  margin: 0 auto;
+
+  padding: 50px;
+  border: 1px solid black;
+  display: grid;
+  background-color: beige;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  grid-template-areas:
+    "photoshop invision ux . . ."
+    ". design design . rust ."
+    ". design design php html ."
+    ". javascript layout webdev webdev ."
+    ". ruby css webdev webdev ."
+    ". go motion motion maya nuke"
+    ". . motion motion cinema-4d ."
+    ". . . after-effects . .";
+}
+
+.box {
+  aspect-ratio: 1 / 1;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  font-weight: bold;
+}
+
+.photoshop {
+  grid-area: photoshop;
+  width: 95%;
+  height: 95%;
+  gap: 10px;
+  background-color: aqua;
+}
+
+.invision {
+  grid-area: invision;
+  width: 95%;
+  height: 95%;
+  gap: 10px;
+  background-color: aqua;
+}
+
+.ux {
+  grid-area: ux;
+  width: 95%;
+  height: 95%;
+  gap: 10px;
+  background-color: aqua;
+}
+
+.design {
+  grid-area: design;
+  width: 97%;
+  height: 97%;
+  gap: 10px;
+  background-color: aqua;
+}
+
+.rust {
+  grid-area: rust;
+  width: 95%;
+  height: 95%;
+  gap: 10px;
+  background-color: teal;
+}
+
+.php {
+  grid-area: php;
+  width: 95%;
+  height: 95%;
+  gap: 10px;
+  background-color: teal;
+}
+
+.html {
+  grid-area: html;
+  width: 95%;
+  height: 95%;
+  gap: 10px;
+  background-color: teal;
+}
+
+.javascript {
+  grid-area: javascript;
+  width: 95%;
+  height: 95%;
+  gap: 10px;
+  background-color: teal;
+}
+
+.layout {
+  grid-area: layout;
+  width: 95%;
+  height: 95%;
+  background-color: aqua;
+}
+
+.webdev {
+  grid-area: webdev;
+  width: 97%;
+  height: 97%;
+  gap: 10px;
+  background-color: teal;
+}
+
+.ruby {
+  grid-area: ruby;
+  width: 95%;
+  height: 95%;
+  gap: 10px;
+  background-color: teal;
+}
+
+.css {
+  grid-area: css;
+  width: 95%;
+  height: 95%;
+  gap: 10px;
+  background-color: teal;
+}
+
+.go {
+  grid-area: go;
+  width: 95%;
+  height: 95%;
+  gap: 10px;
+  background-color: teal;
+}
+
+.motion {
+  grid-area: motion;
+  width: 97%;
+  height: 97%;
+  gap: 10px;
+  background-color: darkred;
+}
+
+.maya {
+  grid-area: maya;
+  width: 95%;
+  height: 95%;
+  gap: 10px;
+  background-color: darkred;
+}
+
+.nuke {
+  grid-area: nuke;
+  width: 95%;
+  height: 95%;
+  gap: 10px;
+  background-color: darkred;
+}
+
+.cinema {
+  grid-area: cinema-4d;
+  width: 95%;
+  height: 95%;
+  gap: 10px;
+  background-color: darkred;
+}
+
+.after-effects {
+  grid-area: after-effects;
+  width: 95%;
+  height: 95%;
+  gap: 10px;
+  background-color: darkred;
+}
