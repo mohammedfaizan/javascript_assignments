@@ -1,0 +1,295 @@
+body {
+  padding: 0;
+  margin: 0;
+  background-color: gray;
+}
+
+.explore {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas:
+    "exp-row1 exp-row1 exp-row1"
+    "exp-row2 exp-row2 exp-row2"
+    "exp-row3 exp-row3 exp-row3";
+
+  gap: 5px;
+}
+
+.microsoft {
+  display: flex;
+  flex-direction: row;
+  background-color: lightblue;
+  height: 200px;
+  width: 400px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.microsoft img {
+  width: 100px;
+  height: 100px;
+}
+
+.edge img {
+  width: 200px;
+  height: 200px;
+}
+
+.explore-row1 {
+  grid-area: exp-row1;
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+}
+
+.explore-row2 img {
+  width: 200px;
+  height: 200px;
+}
+
+.explore-row2 {
+  grid-area: exp-row2;
+}
+
+.explore-row3 img {
+  grid-area: exp-row3;
+  width: 200px;
+  height: 200px;
+}
+
+.multimedia img {
+  width: 100px;
+  height: 100px;
+}
+
+.multimedia {
+  display: grid;
+  grid-template-columns: repeat(2, 100px);
+  grid-template-rows: repeat(2, 100px);
+  gap: 3px;
+}
+
+.play-row1 #x-box {
+  width: 200px;
+  height: 200px;
+}
+
+.play-row1 #photos {
+  width: 160px;
+  height: 160px;
+}
+
+.play-row1 {
+  grid-area: play-row1;
+  display: grid;
+  grid-template-rows: repeat(1, 200px);
+  grid-template-columns: repeat(3, 200px);
+  gap: 5px;
+}
+
+.photos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.play-row2 img {
+  width: 200px;
+  height: 200px;
+}
+
+.play-row2 {
+  grid-area: play-row2;
+  display: grid;
+  grid-template-rows: repeat(1, 200px);
+  grid-template-columns: repeat(3, 200px);
+  gap: 5px;
+}
+
+.play-row3 img {
+  width: 200px;
+  height: 200px;
+}
+
+.play-row3 {
+  grid-area: play-row3;
+  display: grid;
+  grid-template-rows: repeat(1, 200px);
+  grid-template-columns: repeat(3, 200px);
+  gap: 5px;
+}
+
+.play {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas:
+    "play-row1 play-row1 play-row1"
+    "play-row2 play-row2 play-row2"
+    "play-row3 play-row3 play-row3";
+}
+
+.tools img {
+  width: 100px;
+  height: 100px;
+}
+
+.tools {
+  display: grid;
+  grid-template-columns: repeat(2, 100px);
+  grid-template-rows: repeat(2, 100px);
+  gap: 3px;
+}
+
+.oem-row1 #oem-dash,
+.oem-row1 #oem-sync {
+  width: 200px;
+  height: 200px;
+}
+
+.oem-row1 {
+  grid-area: play-row1;
+  display: grid;
+  grid-template-rows: repeat(1, 200px);
+  grid-template-columns: repeat(3, 200px);
+  gap: 5px;
+}
+
+.oem-row2 img {
+  width: 200px;
+  height: 200px;
+}
+
+.oem-row2 {
+  grid-area: play-row1;
+  display: grid;
+  grid-template-rows: repeat(1, 200px);
+  grid-template-columns: repeat(3, 200px);
+  gap: 5px;
+}
+
+.calender img {
+  width: 100px;
+  height: 100px;
+}
+
+.calender {
+  width: 200px;
+  height: 200px;
+  background-color: lightblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.imgs img {
+  width: 75px;
+  height: 75px;
+}
+
+.imgs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.mails {
+  background-color: lightblue;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 200px;
+}
+
+.create-row1 {
+  display: grid;
+  grid-template-rows: repeat(1, 200px);
+  grid-template-columns: repeat(2, 200px);
+  gap: 5px;
+}
+
+.office img {
+  width: 100px;
+  height: 100px;
+}
+
+.office {
+  display: grid;
+  grid-template-columns: repeat(2, 100px);
+  grid-template-rows: repeat(2, 100px);
+}
+
+.get-office-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#office_logo {
+  width: 40px;
+  height: 40px;
+}
+
+.get-office {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  background-color: rgb(230, 81, 12);
+  width: 200px;
+  height: 200px;
+}
+
+#paint {
+  width: 200px;
+  height: 200px;
+}
+
+.create-row2 {
+  display: grid;
+  grid-template-columns: repeat(3, 200px);
+  grid-template-rows: repeat(1, 200px);
+  gap: 3px;
+}
+
+.create {
+  display: grid;
+  position: absolute;
+  top: 150px;
+  left: 300px;
+}
+
+.play {
+  position: absolute;
+  top: 150px;
+  right: 300px;
+}
+
+.explore {
+  position: absolute;
+  top: 650px;
+  left: 300px;
+}
+
+.oem-group-1 {
+  position: absolute;
+  top: 850px;
+  right: 300px;
+}
+
+#oem-group-1 {
+  position: absolute;
+  top: 750px;
+  right: 750px;
+}
+
+.play-heading {
+  position: absolute;
+  top: 50px;
+  right: 750px;
+}
